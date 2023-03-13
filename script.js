@@ -95,11 +95,6 @@ function getRandomName() {
 				var pass="thisisagreatpassword121301831130y8ufgtygfvt6yfg67tyfgvb7tyfgv76tyu98313108913098313113293923";
 				if (try1==pass){
 					name="admin: "+name;
-					var list=get_cookie("list");
-					if (list.includes("admin")==false){
-					    list=String(list)+"admin,";
-				            document.cookie="list="+list+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-					}
 				} 
 			    }
 			    else if (coadmin==true){
@@ -107,11 +102,6 @@ function getRandomName() {
 				var pass="efewiufhweoi7er34try43t34hf944e5drtfgybhujgvyftcdre5rf6tgyhuwt34t34";
 				if (try1==pass){
 					name="co-admin: "+name;
-					var list=get_cookie("list");
-					if (list.includes("co-admin")==false){
-					    list=String(list)+"co-admin,";
-				            document.cookie="list="+list+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-					}
 				} 
 			    }
 			    else if (owner==true){
@@ -119,20 +109,10 @@ function getRandomName() {
 				var pass="efewiufhweoi7er34try43ewfewgfwrdftgyuhnbgvfcder5ft6gyhubgvfdrefuitgyfdrft7yugvftrde54rt67gfrde45fr6g7tbuvfycdes4w3de5t7g6y8btvfcrdeysw4ed5fr6tg7ybuvfycrdte54r8t6g7ytvfycrde5f6ugt7ugegwegrgfsrgsrgt34hf944wt34t34";
 				if (try1==pass){
 					name="owner: "+name;
-					var list=get_cookie("list");
-					if (list.includes("owner")==false){
-				    		list=String(list)+"owner,";
-						document.cookie="list="+list+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-					}
 				} 
 			    }
 			    else{
 				name="member: "+name;
-				var list=get_cookie("list");
-				if (list.includes("member")==false){
-				    list=String(list)+"member,";
-				    document.cookie="list="+list+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-				}
 			    }
 		  }
 		  document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
@@ -195,11 +175,6 @@ function getRandomName() {
 		if (try1==pass){
 			document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 	    		name="admin: "+name;
-			var list=get_cookie("list");
-			if (list.includes("admin")==false){
-			    list=string(list)+"admin,";
-			    document.cookie="list="+list+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-			}
 		} 
 	    }
 	  
@@ -208,11 +183,6 @@ function getRandomName() {
 				var pass="efewiufhweoi7er34try43t34hf944e5drtfgybhujgvyftcdre5rf6tgyhuwt34t34";
 				if (try1==pass){
 					name="co-admin: "+name;
-					if (list.includes("co-admin")==false){
-				            var list=get_cookie("list");
-					    list=String(list)+"co-admin,";
-				            document.cookie="list="+list+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-					}
 				} 
 			    }
 	    else if (owner==true){
@@ -220,23 +190,12 @@ function getRandomName() {
 				var pass="efewiufhweoi7er34try43ewfewgfwrdftgyuhnbgvfcder5ft6gyhubgvfdrefuitgyfdrft7yugvftrde54rt67gfrde45fr6g7tbuvfycdes4w3de5t7g6y8btvfcrdeysw4ed5fr6tg7ybuvfycrdte54r8t6g7ytvfycrde5f6ugt7ugegwegrgfsrgsrgt34hf944wt34t34";
 				if (try1==pass){
 					name="owner: "+name;
-					if (list.includes("owner")==false){
-					    var list=get_cookie("list");
-					    list=String(list)+"owner,";
-				            document.cookie="list="+list+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-					}
 				} 
 			    }
 	    else{
 		document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 	    	name="member: "+name;
-		var list=get_cookie("list");
-		if (list.includes("member")==false){
-		    list=list+"member,";
-		    document.cookie="list="+list+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-		}
 	    }
-            document.cookie="list="+list+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
 	    return name;
 	  }
     if (change==2){
