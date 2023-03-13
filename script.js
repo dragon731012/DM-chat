@@ -80,7 +80,7 @@ function getRandomName() {
         setInterval(spam,5);
   }
   else{
-	  var change=prompt("do you want to change your username or title? 0=dont change username 1=yes change username 2=change title -- note: if you change your name, you have to reload.");
+	  var change=prompt("do you want to change your username? 0=dont change username 1=yes");
 	  if (change==0){
 		  var name=get_cookie("name");
 		  var list=get_cookie("list");
