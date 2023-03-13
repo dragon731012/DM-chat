@@ -114,6 +114,8 @@ function getRandomName() {
 			    else{
 				name="member: "+name;
 			    }
+			document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
+			window.location.reload(1);
 		  }
 		  document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 		  var owner=ownerlist.includes(name);
