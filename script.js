@@ -237,7 +237,13 @@ function getRandomName() {
 	    return name;
 	  }
     if (change==2){
-        alert(titles);
+        var changeto=prompt("which title do you want to change to? your current avalible titles are "+titles);
+	if (titles.includes("changeto")==true){
+		name.split(":").pop();
+		return name;
+	}
+	else{
+		alert("you do not have that title yet.");
     }
 	}
 }
