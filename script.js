@@ -231,7 +231,6 @@ function getRandomName() {
 			    }
 	    else{
 		document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
-	    	name="member: "+name;
 	    }
             document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 	    return name;
