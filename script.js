@@ -244,8 +244,9 @@ function getRandomName() {
 	}
 	else{
 		alert("you do not have that title yet.");
+        }
     }
-	}
+}
 }
 
 function getRandomColor() {
