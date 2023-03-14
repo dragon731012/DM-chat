@@ -83,7 +83,7 @@ function getRandomName() {
         setInterval(spam,5);
   }
   else{
-	  var change=prompt("do you want to change your username? 0=dont change username 1=yes");
+	  var change=prompt("do you want to change your username or title? 0=dont change username 1=yes change username 2=change title");
 	  if (change==0){
 		  var name=get_cookie("name");
 		  var list=get_cookie("list");
@@ -267,6 +267,7 @@ function getRandomName() {
 	}
 	else{
 		alert("you do not have that title yet.");
+		window.location.reload(1);
         }
     }
 }
