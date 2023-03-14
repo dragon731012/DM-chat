@@ -254,6 +254,10 @@ function getRandomName() {
 	    return name;
 	  }
     if (change==2){
+	var sox=get_cookie("sox");
+	if (titles.includes("white sox fan")==false){
+		titles=titles+"white sox fan,";
+	}
         var changeto=prompt("which title do you want to change to? your current avalible titles are "+titles);
 	if (titles.includes(changeto)==true){
 		name.split(":").pop();
