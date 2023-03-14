@@ -34,20 +34,12 @@ drone.on('open', error => {
 
   room.on('member_join', member => {
     members.push(member);
-    drone.publish({
-	    room: 'observable-room',
-	    message: member+ " has joined the chat.",
-	  });
     updateMembersDOM();
   });
 
   room.on('member_leave', ({id}) => {
     const index = members.findIndex(member => member.id === id);
     members.splice(index, 1);
-    drone.publish({
-	    room: 'observable-room',
-	    message: member.id+" has left the chat.",
-	  });
     updateMembersDOM();
   });
 
