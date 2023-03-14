@@ -316,6 +316,9 @@ function sendMessage() {
 	  if (value2=='/white-sox'){
 	  	alert("you have been given a new role!");
 		document.cookie="sox=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
+		if (titles.includes("white sox fan")==false){
+			titles=titles+"white sox fan,";
+		}
 		window.location.reload(1);
 	  }
 	  DOM.input.value = '';
