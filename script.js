@@ -239,7 +239,7 @@ function getRandomName() {
         var changeto=prompt("which title do you want to change to? your current avalible titles are "+titles);
 	if (titles.includes(changeto)==true){
 		name.split(":").pop();
-		name=changeto+": "+name;
+		name=""+String(changeto)+": "+String(name)+"";
 		return name;
 	}
 	else{
