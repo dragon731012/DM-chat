@@ -327,7 +327,11 @@ function sendMessage() {
 			titles=titles+"white sox fan,";
 			document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
 		}
-		window.location.reload(1);
+		document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+		function waiting(){
+			window.location.reload(1);
+		}
+		setTimeout(waiting,15);
 	  }
 	  DOM.input.value = '';
 	  drone.publish({
