@@ -325,6 +325,7 @@ function sendMessage() {
 		document.cookie="sox=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
 		if (titles.includes("white sox fan")==false){
 			titles=titles+"white sox fan,";
+			document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
 		}
 		window.location.reload(1);
 	  }
