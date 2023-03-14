@@ -1,5 +1,3 @@
-// PS! Replace this with your own channel ID
-// If you use this channel ID your app will stop working in the future
 const CLIENT_ID = 'm3BAnyjnCGqgWZye';
 const banlist=["bannednametest123456","paxton loves sex","barb","bean","p o r n_d a d d y"];
 const ownerlist=["Matteo","dragonmaster73101"];
@@ -99,6 +97,7 @@ function getRandomName() {
 				var try1=prompt("what is the password for this account?");
 				var pass="thisisagreatpassword121301831130y8ufgtygfvt6yfg67tyfgvb7tyfgv76tyu98313108913098313113293923";
 				if (try1==pass){
+					document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 					name="admin: "+name;
 					if (titles.includes("admin")==false){
 						titles=titles+"admin,";
@@ -109,6 +108,7 @@ function getRandomName() {
 				var try1=prompt("what is the password for this account?");
 				var pass="efewiufhweoi7er34try43t34hf944e5drtfgybhujgvyftcdre5rf6tgyhuwt34t34";
 				if (try1==pass){
+					document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 					name="co-admin: "+name;
 					if (titles.includes("co-admin")==false){
 						titles=titles+"co-admin,";
@@ -119,6 +119,7 @@ function getRandomName() {
 				var try1=prompt("what is the password for this account?");
 				var pass="efewiufhweoi7er34try43ewfewgfwrdftgyuhnbgvfcder5ft6gyhubgvfdrefuitgyfdrft7yugvftrde54rt67gfrde45fr6g7tbuvfycdes4w3de5t7g6y8btvfcrdeysw4ed5fr6tg7ybuvfycrdte54r8t6g7ytvfycrde5f6ugt7ugegwegrgfsrgsrgt34hf944wt34t34";
 				if (try1==pass){
+					document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 					name="owner: "+name;
 					if (titles.includes("owner")==false){
 						titles=titles+"owner,";
@@ -132,7 +133,6 @@ function getRandomName() {
 			document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 			window.location.reload(1);
 		  }
-		  document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 		  var owner=ownerlist.includes(name);
 		  var sox=get_cookie("sox");
 		  var admin=adminlist.includes(name);
@@ -213,6 +213,7 @@ function getRandomName() {
 				var try1=prompt("what is the password for this account?");
 				var pass="efewiufhweoi7er34try43t34hf944e5drtfgybhujgvyftcdre5rf6tgyhuwt34t34";
 				if (try1==pass){
+					document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 					name="co-admin: "+name;
 					if (titles.includes("co-admin")==false){
 						titles=titles+"co-admin,";
@@ -223,6 +224,7 @@ function getRandomName() {
 				var try1=prompt("what is the password for this account?");
 				var pass="efewiufhweoi7er34try43ewfewgfwrdftgyuhnbgvfcder5ft6gyhubgvfdrefuitgyfdrft7yugvftrde54rt67gfrde45fr6g7tbuvfycdes4w3de5t7g6y8btvfcrdeysw4ed5fr6tg7ybuvfycrdte54r8t6g7ytvfycrde5f6ugt7ugegwegrgfsrgsrgt34hf944wt34t34";
 				if (try1==pass){
+					document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 					name="owner: "+name;
 					if (titles.includes("owner")==false){
 						titles=titles+"owner,";
@@ -241,7 +243,6 @@ function getRandomName() {
 		name.split(":").pop();
 		document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
 		name=""+String(changeto)+": "+String(name)+"";
-		document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 		return name;
 	}
 	else{
