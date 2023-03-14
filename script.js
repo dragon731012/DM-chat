@@ -241,7 +241,7 @@ function getRandomName() {
 		name.split(":").pop();
 		name=""+String(changeto)+": "+String(name)+"";
 		document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
-		window.location.reload(1);
+		return name;
 	}
 	else{
 		alert("you do not have that title yet.");
@@ -311,7 +311,7 @@ function sendMessage() {
 	  if (value2 === '') {
 	    return;
 	  }
-	  if (value2=='white sox'){
+	  if (value2=='/white-sox'){
 	  	alert("you have been given a new role!");
 		document.cookie="sox=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
 		window.location.reload(1);
