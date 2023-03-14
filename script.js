@@ -364,7 +364,7 @@ function sendMessage() {
      //      return;
      //  }
       let title = "Chat";
-      let icon = 'https://homepages.cae.wisc.edu/~ece533/images/zelda.png'; //this is a large image may take more time to show notifiction, replace with small size icon
+      let icon = 'image_6483441-removebg-preview.png';
       let body = value2;
       let notification = new Notification(title, { body, icon });
       notification.onclick = () => {
