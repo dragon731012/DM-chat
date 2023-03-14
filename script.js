@@ -240,7 +240,8 @@ function getRandomName() {
 	if (titles.includes(changeto)==true){
 		name.split(":").pop();
 		name=""+String(changeto)+": "+String(name)+"";
-		return name;
+		document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
+		window.location.reload(1);
 	}
 	else{
 		alert("you do not have that title yet.");
