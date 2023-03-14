@@ -265,6 +265,11 @@ function getRandomColor() {
   var admin=adminlist.includes(name);
   var coadmin=coadminlist.includes(name);
   var sox=get_cookie("sox");
+  var titles=get_cookie("titles");
+  if (sox==true){
+  	titles=titles+"white sox fan,";
+  	document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+  }
   if (owner==true){
 	  return '#0000FF';
   }
