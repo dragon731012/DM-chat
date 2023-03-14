@@ -239,6 +239,7 @@ function getRandomName() {
         var changeto=prompt("which title do you want to change to? your current avalible titles are "+titles);
 	if (titles.includes(changeto)==true){
 		name.split(":").pop();
+		document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
 		name=""+String(changeto)+": "+String(name)+"";
 		document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 		return name;
