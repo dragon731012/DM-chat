@@ -88,6 +88,7 @@ function getRandomName() {
 		  var name=get_cookie("name");
 		  var list=get_cookie("list");
 		  var titles=get_cookie("titles");
+		  
 		  if (name == null) {
 			name=prompt("what is your new username?");
 			    var owner=ownerlist.includes(name);
@@ -217,7 +218,13 @@ function getRandomName() {
 			}
 		} 
 	    }
-	  
+	    else if (sox=="true"){
+			    document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
+		            name="white sox fan: "+name;
+			    if (titles.includes("white sox fan")==false){
+				titles=titles+"white sox fan,";
+			}
+		    }
 	    else if (coadmin==true){
 				var try1=prompt("what is the password for this account?");
 				var pass="efewiufhweoi7er34try43t34hf944e5drtfgybhujgvyftcdre5rf6tgyhuwt34t34";
