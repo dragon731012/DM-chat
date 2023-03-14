@@ -87,12 +87,14 @@ function getRandomName() {
 	  if (change==0){
 		  var name=get_cookie("name");
 		  var list=get_cookie("list");
+		  var titles=get_cookie("titles");
 		  if (name == null) {
 			name=prompt("what is your new username?");
 			    var owner=ownerlist.includes(name);
 			    var sox=get_cookie("sox");
 			    var admin=adminlist.includes(name);
 			    var coadmin=coadminlist.includes(name);
+			    var titles=get_cookie("titles");
 			    if (admin==true){
 				var try1=prompt("what is the password for this account?");
 				var pass="thisisagreatpassword121301831130y8ufgtygfvt6yfg67tyfgvb7tyfgv76tyu98313108913098313113293923";
