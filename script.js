@@ -359,20 +359,6 @@ function sendMessage() {
            }
        });
    }
-   function showNotification() {
-     //  if(document.visibilityState === "visible") {
-     //      return;
-     //  }
-      let title = "Chat";
-      let icon = 'image_6483441-removebg-preview.png';
-      let body = value2;
-      let notification = new Notification(title, { body, icon });
-      notification.onclick = () => {
-             notification.close();
-             window.parent.focus();
-      }
-
-   }
 	  DOM.input.value = '';
 	  drone.publish({
 	    room: 'observable-room',
