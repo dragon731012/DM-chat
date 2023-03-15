@@ -344,21 +344,7 @@ function sendMessage() {
 		document.cookie="sox=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
 		window.location.reload(1);
 	  }
-	  let permission = Notification.permission;
-   if(permission === "granted"){
-      showNotification();
-   } else if(permission === "default"){
-      requestAndShowPermission();
-   } else {
-     alert("Use normal alert");
-   }
-   function requestAndShowPermission() {
-       Notification.requestPermission(function (permission) {
-           if (permission === "granted") {
-               showNotification();
-           }
-       });
-   }
+	
 	  DOM.input.value = '';
 	  drone.publish({
 	    room: 'observable-room',
