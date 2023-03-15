@@ -33,6 +33,12 @@ const room = drone.subscribe('feed', {
 
 room.on('history_message', ({data}) => {
   console.log(data);
+  const el = DOM.messages;
+  const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
+  el.appendChild(createMessageElement(data));
+  if (wasTop) {
+    el.scrollTop =  el.scrollHeight - el.clientHeight;
+  }
 });	
 	
   room.on('members', m => {
