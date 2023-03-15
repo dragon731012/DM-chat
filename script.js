@@ -323,6 +323,22 @@ function getRandomName() {
 	    return name;
 	  }
     if (change==2){
+		var sox=get_cookie("sox");
+	var hacker=get_cookie("hacker");
+	var dkoldies=get_cookie("dkoldies");
+	var fortnite=get_cookie("fortnite");
+	if (titles.includes("white sox fan")==false){
+		titles=titles+"white sox fan,";
+	}
+	if (titles.includes("hacker")==false){
+		titles=titles+"hacker,";
+	}
+	if (titles.includes("fortnite sweat")==false){
+		titles=titles+"fortnite sweat,";
+	}
+	if (titles.includes("dkoldies")==false){
+		titles=titles+"dkoldies,";
+	}
         var changeto=prompt("which title do you want to change to? your current avalible titles are "+titles);
 	if (titles.includes(changeto)==true){
 		name.split(":").pop();
