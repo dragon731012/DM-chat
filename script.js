@@ -27,20 +27,6 @@ drone.on('open', error => {
     console.log('Successfully joined room');
   });
 
-room = drone.subscribe('feed', {
-  historyCount: 100 // ask for the 100 latest messages from history
-});
-
-room.on('history_message', ({data}) => {
-  console.log(data);
-  const el = DOM.messages;
-  const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
-  el.appendChild(createMessageElement(data));
-  if (wasTop) {
-    el.scrollTop =  el.scrollHeight - el.clientHeight;
-  }
-});	
-	
   room.on('members', m => {
     members = m;
     updateMembersDOM();
