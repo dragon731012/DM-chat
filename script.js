@@ -1,5 +1,5 @@
 const CLIENT_ID = 'm3BAnyjnCGqgWZye';
-const banlist=["bannednametest123456","paxton loves sex","barb","bean","p o r n_d a d d y"];
+const banlist=["paxton loves sex","barb","bean","p o r n_d a d d y"];
 const ownerlist=["Matteo","dragonmaster73101"];
 const adminlist=["Nate","Pax"];
 const coadminlist=["Yoga","DavidAtSchool","julian","dragonjr"];
