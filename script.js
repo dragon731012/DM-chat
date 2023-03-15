@@ -93,6 +93,7 @@ function getRandomName() {
 			name=prompt("what is your new username?");
 			    var owner=ownerlist.includes(name);
 			    var sox=get_cookie("sox");
+			    var dkoldies=get_cookie("dkoldies");
 			    var fortnite=get_cookie("fortnite");
 			    var admin=adminlist.includes(name);
 			    var coadmin=coadminlist.includes(name);
@@ -137,6 +138,13 @@ function getRandomName() {
 					titles=titles+"white sox fan,";
 				}
 			    }
+			    else if (dkoldies=="true"){
+				    document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
+				    name="dkoldies: "+name;
+				    if (titles.includes("dkoldies")==false){
+					titles=titles+"dkoldies,";
+				}
+			    }
 			    else if (fortnite=="true"){
 				    document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 				    name="fortnite sweat: "+name;
@@ -153,6 +161,7 @@ function getRandomName() {
 		  }
 		  var owner=ownerlist.includes(name);
 		  var sox=get_cookie("sox");
+		  var dkoldies=get_cookie("dkoldies");
 		  var fortnite=get_cookie("fortnite");
 		  var admin=adminlist.includes(name);
 		  var coadmin=coadminlist.includes(name);
@@ -168,6 +177,13 @@ function getRandomName() {
 		            name="white sox fan: "+name;
 			    if (titles.includes("white sox fan")==false){
 				titles=titles+"white sox fan,";
+			}
+		    }
+		    else if (dkoldies=="true"){
+			    document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
+		            name="dkoldies: "+name;
+			    if (titles.includes("dkoldies")==false){
+				titles=titles+"dkoldies,";
 			}
 		    }
 		    else if (fortnite=="true"){
@@ -241,6 +257,13 @@ function getRandomName() {
 				titles=titles+"white sox fan,";
 			}
 		    }
+	    else if (dkoldies=="true"){
+			    document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
+		            name="dkoldies: "+name;
+			    if (titles.includes("dkoldies")==false){
+				titles=titles+"dkoldies,";
+			}
+		    }
 	    else if (fortnite=="true"){
 			    document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 		            name="fortnite sweat: "+name;
@@ -278,12 +301,16 @@ function getRandomName() {
 	  }
     if (change==2){
 	var sox=get_cookie("sox");
+	var dkoldies=get_cookie("dkoldies");
 	var fortnite=get_cookie("fortnite");
 	if (titles.includes("white sox fan")==false){
 		titles=titles+"white sox fan,";
 	}
 	if (titles.includes("fortnite sweat")==false){
 		titles=titles+"fortnite sweat,";
+	}
+	if (titles.includes("dkoldies")==false){
+		titles=titles+"dkoldies,";
 	}
         var changeto=prompt("which title do you want to change to? your current avalible titles are "+titles);
 	if (titles.includes(changeto)==true){
@@ -302,6 +329,7 @@ function getRandomName() {
 
 function getRandomColor() {
   var name=get_cookie("name");
+  var dkoldies=get_cookie("dkoldies");
   var owner=ownerlist.includes(name);
   var admin=adminlist.includes(name);
   var coadmin=coadminlist.includes(name);
@@ -310,6 +338,10 @@ function getRandomColor() {
   var titles=get_cookie("titles");
   if (sox==true){
   	titles=titles+"white sox fan,";
+  	document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+  }
+  if (dkoldies==true){
+  	titles=titles+"dkoldies,";
   	document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
   }
   if (fortnite==true){
@@ -323,6 +355,9 @@ function getRandomColor() {
 	  return '#000000';
   }
   if (fortnite=="true"){
+	  return '#000000';
+  }
+  if (dkoldies=="true"){
 	  return '#000000';
   }
   if (admin==true){
@@ -380,6 +415,11 @@ function sendMessage() {
 		window.location.reload(1);
 	  }
 	  if (value2=='/fortnite'){
+	  	alert("you have been given a new role!");
+		document.cookie="sox=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
+		window.location.reload(1);
+	  }
+	  if (value2=='/dkoldies'){
 	  	alert("you have been given a new role!");
 		document.cookie="sox=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
 		window.location.reload(1);
