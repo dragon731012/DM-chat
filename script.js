@@ -3,8 +3,6 @@ const banlist=["paxton loves sex","barb","bean","p o r n_d a d d y"];
 const ownerlist=["Matteo","dragonmaster73101"];
 const adminlist=["Nate","Pax"];
 const coadminlist=["Yoga","DavidAtSchool","julian","dragonjr"];
-const fedex=["Fedex Diver DragonJR","Joey - Let's Ship Your Order!"];
-
 function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
@@ -100,7 +98,6 @@ function getRandomName() {
 			    var fortnite=get_cookie("fortnite");
 			    var admin=adminlist.includes(name);
 			    var coadmin=coadminlist.includes(name);
-			    var fedex=fedex.includes(name);
 			    var titles=get_cookie("titles");
 			    if (admin==true){
 				var try1=prompt("what is the password for this account?");
@@ -121,17 +118,6 @@ function getRandomName() {
 					name="co-admin: "+name;
 					if (titles.includes("co-admin")==false){
 						titles=titles+"co-admin,";
-					}
-				} 
-			    }
-			    else if (fedex==true){
-				var try1=prompt("what is the password for this account?");
-				var pass="sfjdgweiusdjkfghweojqw2fdgkhwekusjfgweffewfwef";
-				if (try1==pass){
-					document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
-					name="fedex: "+name;
-					if (titles.includes("fedex")==false){
-						titles=titles+"fedex,";
 					}
 				} 
 			    }
@@ -182,7 +168,6 @@ function getRandomName() {
 			window.location.reload(1);
 		  }
 		  var owner=ownerlist.includes(name);
-		  var fedex=fedex.includes(name);
 		  var sox=get_cookie("sox");
 		  var hacker=get_cookie("hacker");
 		  var dkoldies=get_cookie("dkoldies");
@@ -231,13 +216,6 @@ function getRandomName() {
 					titles=titles+"co-admin,";
 				}
 			    }
-		  else if (fedex==true){
-				document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
-				name="fedex: "+name;
-				if (titles.includes("fedex")==false){
-					titles=titles+"fedex,";
-				}
-			    }
 		    	    else if (owner==true){
 				document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 			        name="owner: "+name;
@@ -275,7 +253,6 @@ function getRandomName() {
 	    }
 		  
             var owner=ownerlist.includes(name);
-	    var fedex=fedex.includes(name);
 	    var admin=adminlist.includes(name);
 	    var coadmin=coadminlist.includes(name);
   	    if (admin==true){
@@ -301,13 +278,6 @@ function getRandomName() {
 		            name="hacker: "+name;
 			    if (titles.includes("hacker")==false){
 				titles=titles+"hacker,";
-			}
-		    }
-            else if (fedex=="true"){
-			    document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
-		            name="fedex: "+name;
-			    if (titles.includes("fedex")==false){
-				titles=titles+"fedex,";
 			}
 		    }
 	    else if (dkoldies=="true"){
@@ -416,9 +386,6 @@ function getRandomColor() {
   if (sox=="true"){
 	  return '#000000';
   }
-  if (fedex=="true"){
-	  return '#000000';
-  }
   if (fortnite=="true"){
 	  return '#000000';
   }
@@ -477,18 +444,22 @@ function sendMessage() {
 	  if (value2=='/white-sox'){
 	  	alert("you have been given a new role!");
 		document.cookie="sox=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
+		window.location.reload(1);
 	  }
 	  if (value2=='/fortnite'){
 	  	alert("you have been given a new role!");
 		document.cookie="fortnite=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
+		window.location.reload(1);
 	  }
 	  if (value2=='/dkoldies'){
 	  	alert("you have been given a new role!");
 		document.cookie="dkoldies=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
+		window.location.reload(1);
 	  }
 	  if (value2=='/hacker'){
 	  	alert("you have been given a new role!");
 		document.cookie="hacker=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
+		window.location.reload(1);
 	  }
 	
 	  DOM.input.value = '';
