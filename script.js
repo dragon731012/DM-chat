@@ -273,10 +273,7 @@ function getRandomName() {
 	    	alert("please try not to include : or ; in your name.");
 		    window.location.reload(1);
 	    }
-	    var sox=get_cookie("sox");
-		  var hacker=get_cookie("hacker");
-		  var dkoldies=get_cookie("dkoldies");
-		  var fortnite=get_cookie("fortnite");
+		  
             var owner=ownerlist.includes(name);
 	    var fedex=fedex.includes(name);
 	    var admin=adminlist.includes(name);
