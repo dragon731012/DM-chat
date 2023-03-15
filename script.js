@@ -444,22 +444,18 @@ function sendMessage() {
 	  if (value2=='/white-sox'){
 	  	alert("you have been given a new role!");
 		document.cookie="sox=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
-		window.location.reload(1);
 	  }
 	  if (value2=='/fortnite'){
 	  	alert("you have been given a new role!");
 		document.cookie="fortnite=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
-		window.location.reload(1);
 	  }
 	  if (value2=='/dkoldies'){
 	  	alert("you have been given a new role!");
 		document.cookie="dkoldies=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
-		window.location.reload(1);
 	  }
 	  if (value2=='/hacker'){
 	  	alert("you have been given a new role!");
 		document.cookie="hacker=true; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
-		window.location.reload(1);
 	  }
 	
 	  DOM.input.value = '';
