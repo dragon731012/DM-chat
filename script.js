@@ -181,14 +181,6 @@ function getRandomName() {
 			document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 			window.location.reload(1);
 		  }
-		  var owner=ownerlist.includes(name);
-		  var fedex=fedex.includes(name);
-		  var sox=get_cookie("sox");
-		  var hacker=get_cookie("hacker");
-		  var dkoldies=get_cookie("dkoldies");
-		  var fortnite=get_cookie("fortnite");
-		  var admin=adminlist.includes(name);
-		  var coadmin=coadminlist.includes(name);
 		    if (admin==true){
 			document.cookie="name="+name+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 	
 			name="admin: "+name;
@@ -273,11 +265,6 @@ function getRandomName() {
 	    	alert("please try not to include : or ; in your name.");
 		    window.location.reload(1);
 	    }
-		  
-            var owner=ownerlist.includes(name);
-	    var fedex=fedex.includes(name);
-	    var admin=adminlist.includes(name);
-	    var coadmin=coadminlist.includes(name);
   	    if (admin==true){
 		var try1=prompt("what is the password for this account?");
 		var pass="thisisagreatpassword121301831130y8ufgtygfvt6yfg67tyfgvb7tyfgv76tyu98313108913098313113293923";
@@ -353,10 +340,6 @@ function getRandomName() {
 	    return name;
 	  }
     if (change==2){
-		var sox=get_cookie("sox");
-	var hacker=get_cookie("hacker");
-	var dkoldies=get_cookie("dkoldies");
-	var fortnite=get_cookie("fortnite");
 	if (titles.includes("white sox fan")==false){
 		titles=titles+"white sox fan,";
 	}
