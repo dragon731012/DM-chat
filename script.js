@@ -27,7 +27,7 @@ drone.on('open', error => {
     console.log('Successfully joined room');
   });
 
-const room = drone.subscribe('feed', {
+room = drone.subscribe('feed', {
   historyCount: 100 // ask for the 100 latest messages from history
 });
 
