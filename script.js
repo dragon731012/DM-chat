@@ -121,6 +121,7 @@ const DOM = {
   membersCount: document.querySelector('.members-count'),
   membersList: document.querySelector('.members-list'),
   messages: document.querySelector('.messages'),
+  viewbutton: document.querySelector('.view-button'),
   input: document.querySelector('.message-form__input'),
   form: document.querySelector('.message-form'),
 };
@@ -201,6 +202,7 @@ function createMemberElement(member) {
 
 function updateMembersDOM() {
   DOM.membersCount.innerText = `${members.length} users in room:`;
+  DOM.viewbutton.innerText=`${members.length}`;
   DOM.membersList.innerHTML = '';
   members.forEach(member =>
     DOM.membersList.appendChild(createMemberElement(member))
