@@ -1,0 +1,98 @@
+<h1 id="text" align="top" style="text-align:center; top:150px;">what do you want your username to be?</h1>
+<input class='usernameprompt' placeholder='Type your username here' type='text'/>
+<div class="button">
+  <img src="up-removebg-preview.png" onclick="submitusername();"/>
+</div>
+<link rel="icon" href="image_6483441-removebg-preview.png">
+<title>DM chat</title>
+<style>
+  .usernameprompt {
+      border-radius: 25px;
+      flex-grow: 1;
+      border: 4px solid #ADD8E6;
+      padding: 10px 15px;
+      width: 100%;
+      font-size: 16px;
+    }
+  .button {
+    opacity: 0.5;	
+    left:40%;
+    top:50%;
+    position: absolute;
+  }
+  .button:hover{
+    opacity: 1;
+  }
+</style>
+<script>
+  function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
+  var titles=get_cookie("titles");
+  const ownerlist=["Matteo","dragonmaster73101"];
+  const adminlist=["Nate","Pax","Fedex Driver DragonJR"];
+  const coadminlist=["Yoga","DavidAtSchool","julian","dragonjr"];
+  const fedex=["Fedex Driver DragonJR","dragonmaster73101"];
+  const enter = {
+  username: document.querySelector('.usernameprompt'),
+  button: document.querySelector('.button'),
+};
+  function submitusername(){
+    const value = enter.username.value;
+    if (adminlist.includes(value) || coadminlist.includes(value) || adminlist.includes(value) || ownerlist.includes(value) || fedex.includes(value)){
+      if (adminlist.includes(value)){
+        var nothing="gihguyjrhfg76iytdft7ygdf7tyd5f7tydf76yuf67yuf67yrf5t6dsceast54r";
+        var ask=prompt("what is the password for this account?");
+        if (ask==nothing){
+          titles=titles+"admin,";
+          document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          window.location.pathname="/titles.html";
+        }
+        else{
+          alert("wrong password");
+        }
+      }
+      if (fedex.includes(value)){
+        var nothing="utccgycghfvuyfghf65ytdc6tydfctyghdftysdrtygdcvtyughdfvtyuhdctygdv76ed46rtyrg67e7yu";
+        var ask=prompt("what is the password for this account?");
+        if (ask==nothing){
+          titles=titles+"fedex,";
+          document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          window.location.pathname="/titles.html";
+        }
+        else{
+          alert("wrong password");
+        }
+      }
+      if (ownerlist.includes(value)){
+        var nothing="saefg934egfuih34er9y8fu34ieryfh8eur9gtjsbf348wreutfrhp3948eiwtyfh3489ewufih3488fyhg3478fyuhew9r7u4y89ru4i3ehwgry8g4u98ywrh9834uuugew97ugifeif";
+        var ask=prompt("what is the password for this account?");
+        if (ask==nothing){
+          titles=titles+"owner,";
+          document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          window.location.pathname="/titles.html";
+        }
+        else{
+          alert("wrong password");
+        }
+      }
+      
+      if (coadminlist.includes(value)){
+        var nothing="f68vyrf67tws45rtfwsd65tygedf786yurf68ydf86y";
+        var ask=prompt("what is the password for this account?");
+        if (ask==nothing){
+          titles=titles+"co-admin,";
+          document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          window.location.pathname="/titles.html";
+        }
+        else{
+          alert("wrong password");
+        }
+      }
+    }
+    document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+    window.location.pathname="/titles.html";
+  }
+</script>

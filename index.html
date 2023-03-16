@@ -1,0 +1,43 @@
+<script>
+  var name=get_cookie("name");
+	var list=get_cookie("list");
+	var titles=get_cookie("titles");
+  function yes(){
+  	window.location.pathname="/changeusername.html";
+  }
+  function no(){
+	window.location.pathname="/titles.html";
+  }
+</script>
+<link rel="icon" href="image_6483441-removebg-preview.png">
+<title>DM chat</title>
+<h1 id="text" align="top" style="text-align:center; top:150px;">do you want to change your username?</h1>
+<style>
+	.button-yes {
+	  text-align: left;
+	  opacity: 0.5;	
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	}
+	.button-yes:hover {
+	  opacity: 1;	
+	}
+	.button-no {
+	  text-align: right;
+	  opacity: 0.5;	
+	  position: absolute;
+	  top: 50%;
+	  right: 50%;
+
+	}
+	.button-no:hover {
+	  opacity: 1;	
+	}
+</style>
+<div class="button-no">
+  <img src="download-removebg-preview.png" id="no" onclick="no();"/>
+</div>
+<div class="button-yes">
+  <img src="up-removebg-preview.png" id="yes" onclick="yes();"/>
+</div>

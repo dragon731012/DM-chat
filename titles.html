@@ -1,0 +1,51 @@
+<h1 id="text" align="top" style="text-align:center; top:150px;">what title do you want to equip?</h1>
+<h3 id="titletext" align="top" style="text-align:center; top:150px;"></h1>
+<div class="button">
+  <img src="up-removebg-preview.png" onclick="submittitle();"/>
+</div>
+<link rel="icon" href="image_6483441-removebg-preview.png">
+<title>DM chat</title>
+<input class='titleprompt' placeholder='Type your title here' type='text'/>
+<h3 id="errortext" align="top" style="text-align:center; top:150px;"></h1>
+<script>
+  function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
+  titles=get_cookie("titles");
+  titletext.innerText="your titles are "+titles;
+</script>
+
+<style>
+  .titleprompt {
+      border-radius: 25px;
+      flex-grow: 1;
+      border: 4px solid #ADD8E6;
+      padding: 10px 15px;
+      width: 100%;
+      font-size: 16px;
+    }
+  .button {
+    opacity: 0.5;	
+    left:40%;
+    top:50%;
+    position: absolute;
+  }
+  .button:hover {
+    opacity: 1;
+  }
+</style>
+<script>
+const enter = {
+  titlevalue: document.querySelector('.titleprompt'),
+  button: document.querySelector('.button'),
+};
+
+  function submittitle(){
+    const value = enter.titlevalue.value;
+    if (titles.includes(value)){
+    	document.cookie="currenttitle="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+    	window.location.pathname="/begin.html";
+    }
+    else{
+	alert("you do not own that title yet.");
+    }
+  }
+</script>
