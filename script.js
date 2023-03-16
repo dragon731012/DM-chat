@@ -201,6 +201,13 @@ function createMemberElement(member) {
 }
 
 function updateMembersDOM() {
+  if (DOM.viewbutton("body > p:hover") != null) {
+    alert("hovering");
+    DOM.membersList.innerHTML = '';
+    members.forEach(member =>
+      DOM.membersList.appendChild(createMemberElement(member))
+    );
+  }
   DOM.membersCount.innerText = `${members.length} users in room:`;
   DOM.viewbutton.innerText=`${members.length}`;
   DOM.membersList.innerHTML = '';
