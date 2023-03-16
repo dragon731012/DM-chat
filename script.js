@@ -201,10 +201,6 @@ function createMemberElement(member) {
 }
 
 function updateMembersDOM() {
-  var mytext = document.getElementById("view-button");
-  if(mytext.matches(":hover")) {
-    alert("hovering");
-  }
   DOM.membersCount.innerText = `${members.length} users in room:`;
   DOM.viewbutton.innerText=`${members.length}`;
   DOM.membersList.innerHTML = '';
