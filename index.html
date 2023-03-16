@@ -1,5 +1,8 @@
 <script>
   var name=get_cookie("name");
+  if (name==undefined){
+	  window.location.pathname="/changeusername";
+  }
 	var list=get_cookie("list");
 	var titles=get_cookie("titles");
   function yes(){
