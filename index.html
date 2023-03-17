@@ -1,15 +1,15 @@
 <script>
   var name=get_cookie("name");
   if (name==undefined){
-	  window.location.pathname="/changeusername.html";
+	  window.location.pathname=window.location.pathname+"/changeusername.html";
   }
 	var list=get_cookie("list");
 	var titles=get_cookie("titles");
   function yes(){
-  	window.location.pathname="/changeusername.html";
+  	window.location.pathname=window.location.pathname+"/changeusername.html";
   }
   function no(){
-	window.location.pathname="/titles.html";
+	window.location.pathname=window.location.pathname+"/titles.html";
   }
 </script>
 <link rel="icon" href="image_6483441-removebg-preview.png">
