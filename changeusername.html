@@ -25,6 +25,10 @@
   }
 </style>
 <script>
+  function windowlocationpathname(current,newone){
+    var href2=window.location.href;
+    window.location.href=href2.replace(current,newone);
+  }
   function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
   var titles=get_cookie("titles");
   const ownerlist=["Matteo","dragonmaster73101"];
@@ -45,7 +49,7 @@
           titles=titles+"admin,";
           document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
           document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-          window.location.pathname="/titles.html";
+          windowlocationpathname("changeusername.html","titles.html");
         }
         else{
           alert("wrong password");
@@ -58,7 +62,7 @@
           titles=titles+"fedex,";
           document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
           document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-          window.location.pathname="/titles.html";
+          windowlocationpathname("changeusername.html","titles.html");
         }
         else{
           alert("wrong password");
@@ -71,7 +75,7 @@
           titles=titles+"owner,";
           document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
           document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-          window.location.pathname="/titles.html";
+          windowlocationpathname("changeusername.html","titles.html");
         }
         else{
           alert("wrong password");
@@ -85,7 +89,7 @@
           titles=titles+"co-admin,";
           document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
           document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-          window.location.pathname="/titles.html";
+          windowlocationpathname("changeusername.html","titles.html");
         }
         else{
           alert("wrong password");
@@ -93,6 +97,6 @@
       }
     }
     document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-    window.location.pathname="/titles.html";
+    windowlocationpathname("changeusername.html","titles.html");
   }
 </script>
