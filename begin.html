@@ -92,14 +92,13 @@
   <script>
   var viewing=false;
   function viewing(){
-    var viewbutton=document.querySelector('.view-button'),
-    if (viewing=false){
+    if (viewing==false){
       viewing=true; 
-      viewbutton.style.opacity=1;
+      document.querySelector('.members-count').style.opacity=1;
     }
     else{
       viewing=false;
-      viewbutton.style.opacity=0.5;
+      document.querySelector('.members-count').style.opacity=0.5;
     }
   }
 </script>
