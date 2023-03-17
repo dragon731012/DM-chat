@@ -68,7 +68,7 @@ function viewing(){
       viewbutton.style.opacity=1;
     }
     else{
-      viewing==false;
+      viewing=false;
       viewbutton.style.opacity=0.5;
     }
   });
