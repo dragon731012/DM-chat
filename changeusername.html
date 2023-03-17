@@ -25,10 +25,7 @@
   }
 </style>
 <script>
-  function windowlocationpathname(current,newone){
-    var href2=window.location.href;
-    window.location.href=href2.replace(current,newone);
-  }
+  function windowlocationpathname(current,newone){var href2=window.location.href;window.location.href=href2.replace(current,newone);}
   function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
   var titles=get_cookie("titles");
   const ownerlist=["Matteo","dragonmaster73101"];
