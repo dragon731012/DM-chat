@@ -76,33 +76,8 @@ function getRandomColor() {
   var fortnite=get_cookie("fortnite");
   var hacker=get_cookie("hacker");
   var titles=get_cookie("titles");
-  if (sox==true){
-  	titles=titles+"white sox fan,";
-  	document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-  }
-  if (dkoldies==true){
-  	titles=titles+"dkoldies,";
-  	document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-  }
-  if (hacker==true){
-  	titles=titles+"hacker,";
-  	document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-  }
-  if (fortnite==true){
-  	titles=titles+"fortnite sweat,";
-  	document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-  }
   if (owner==true){
 	  return '#0000FF';
-  }
-  if (sox=="true"){
-	  return '#000000';
-  }
-  if (fortnite=="true"){
-	  return '#000000';
-  }
-  if (dkoldies=="true"){
-	  return '#000000';
   }
   if (admin==true){
 	  return '#0000FF';
