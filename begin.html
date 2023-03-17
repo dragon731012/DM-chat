@@ -92,14 +92,20 @@
   <script>
   var viewing2=false;
   const viewbutton=document.getElementById("view-button");
+  const memberscount=document.getElementById("members-count");
+  const memberslist=document.getElementById("members-list");
   function viewing(){
     if (viewing2==false){
       viewing2=true; 
       viewbutton.style.opacity=1;
+      memberscount.style.display = "block";
+      memberslist.style.display = "block";
     }
     else{
       viewing2=false;
       viewbutton.style.opacity=0.5;
+      memberscount.style.display = "none";
+      memberslist.style.display = "none";
     }
   }
 </script>
