@@ -8,6 +8,7 @@
 <input class='titleprompt' placeholder='Type your title here' type='text'/>
 <h3 id="errortext" align="top" style="text-align:center; top:150px;"></h1>
 <script>
+  function windowlocationpathname(current,newone){var href2=window.location.href;window.location.href=href2.replace(current,newone);}
   function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
   titles=get_cookie("titles");
   if (titles==undefined){
@@ -46,7 +47,7 @@ const enter = {
     const value = enter.titlevalue.value;
     if (titles.includes(value)){
     	document.cookie="currenttitle="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-    	window.location.pathname="/begin.html";
+    	windowlocationpathname("titles.html","begin.html");
     }
     else{
 	alert("you do not own that title yet.");
