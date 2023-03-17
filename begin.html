@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+  var viewing=false;
+  function viewing(){
+    var viewbutton=document.getElementById('view-button');
+    if (viewing=false){
+      viewing=true; 
+      viewbutton.style.opacity=1;
+    }
+    else{
+      viewing=false;
+      viewbutton.style.opacity=0.5;
+    }
+  }
+</script>
   <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
   <!--<script type='text/javascript' src='http://0.0.0.0:8080/scaledrone.js'></script>-->
   <title>DM chat</title>
@@ -79,20 +93,6 @@
     }
   </style>
 </head>
-<script>
-  var viewing=false;
-  function viewing(){
-    var viewbutton=document.getElementById('view-button');
-    if (viewing=false){
-      viewing=true; 
-      viewbutton.style.opacity=1;
-    }
-    else{
-      viewing=false;
-      viewbutton.style.opacity=0.5;
-    }
-  }
-</script>
 <body>
   <img src="view.png" align="right" class='view-button' id='view-button' onclick="viewing();"/>
   <div class='members-count'>-</div>
