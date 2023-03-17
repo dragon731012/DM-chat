@@ -21,20 +21,20 @@
 	>?
     </p>  
     <img id="gas"
-	 src="roadrunner/gas-removebg-preview.png"	
+	 src="gas-removebg-preview.png"	
          style="position:fixed; left:0px; top:0px;width:50px; height:50px; border:none;"
     >
     <img id="coin"
-	 src="roadrunner/450-4500979_vector-coin-video-game-coin-images-for-games-removebg-preview.png"	
+	 src="450-4500979_vector-coin-video-game-coin-images-for-games-removebg-preview.png"	
          style="position:fixed; left:0px; top:0px;width:50px; height:50px; border:none;"
     >
     <img id="car"
-	 src="roadrunner/252623BD-836E-4323-AE4D-C91D4A1A484D.png"
+	 src="252623BD-836E-4323-AE4D-C91D4A1A484D.png"
          style="position:fixed; left:0px; top:0px;width:50px; height:50px; border:none;"
     >
     <body style="background-color:#50C878;">
     <img id="enemy"
-	 src="roadrunner/Empty.png"	
+	 src="Empty.png"	
          style="position:fixed; left:0px; top:0px;width:50px; height:50px; border:none;"
     >
     <script>
@@ -155,16 +155,16 @@
 		var enemycar = "";
 		var enemynum = Math.floor(Math.random() * (4 - 1 + 1) + 1);
 		if (enemynum == 1) {
-			enemycar = "roadrunner/enemycar1.png";
+			enemycar = "enemycar1.png";
 		}
 		if (enemynum == 2) {
-			enemycar = "roadrunner/enemycar2.png";
+			enemycar = "enemycar2.png";
 		}
 		if (enemynum == 3) {
-			enemycar = "roadrunner/259DA7B3-FF41-4B47-B7A0-F65913634E56.png";
+			enemycar = "259DA7B3-FF41-4B47-B7A0-F65913634E56.png";
 		}
 		if (enemynum == 4) {
-			enemycar = "roadrunner/enemycar4.png";
+			enemycar = "enemycar4.png";
 		}
 		enemy.src = enemycar;
 		var pos = Math.floor(Math.random()*(4-1+1)+1);
@@ -245,7 +245,7 @@
 		bg.style.left = left + "px";
 		bg.style.height = height + "px";
 		if (carleft < enemypos + carwidth && carleft + carwidth > enemypos && cartop < enemyypos + carheight && cartop + carheight > enemyypos) {
-			car.src='roadrunner/Screenshot_2023-02-16_205847-removebg-preview.png';
+			car.src='Screenshot_2023-02-16_205847-removebg-preview.png';
 			window.location.reload(1);
 			if (alerting==true){
 				alert("you lose.");
@@ -286,10 +286,10 @@
 				enemyspeed = enemyspeed + 1.5;
 			}
 			if (enemyspeed >=3 && enemyspeed <=5){
-				bg.src='roadrunner/mediumroad.gif';
+				bg.src='mediumroad.gif';
 			}
 			if (enemyspeed >=6 && enemyspeed <=8){
-				bg.src='roadrunner/fastroad.gif';
+				bg.src='fastroad.gif';
 			}
 			makeenemy();
 		}
@@ -303,7 +303,7 @@
 	setInterval(move, 15);
 	function gallonupdate(){
 		if (gallons-1<=0){
-			car.src='roadrunner/Screenshot_2023-02-16_205847-removebg-preview.png';
+			car.src='Screenshot_2023-02-16_205847-removebg-preview.png';
 			window.location.reload(1);
 			if (alerting==true){
 				alert("you lose.");
