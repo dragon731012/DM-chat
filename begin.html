@@ -21,6 +21,7 @@
     .members-count,
     .members-list,
     .messages {
+      display:block;
       overflow: auto;
       border: 1px solid #e4e4e4;
       padding: 15px;
@@ -98,14 +99,14 @@
     if (viewing2==false){
       viewing2=true; 
       viewbutton.style.opacity=1;
-      memberscount.removeAttribute("hidden");
-      memberslist.removeAttribute("hidden");
+      memberscount.style.display = "block";
+      memberslist.style.display = "block";
     }
     else{
       viewing2=false;
       viewbutton.style.opacity=0.5;
-      memberscount.setAttribute("hidden", "hidden");
-      memberslist.setAttribute("hidden", "hidden");
+      memberscount.style.display = "none";
+      memberslist.style.display = "none";
     }
   }
 </script>
