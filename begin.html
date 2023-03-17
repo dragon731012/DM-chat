@@ -91,14 +91,15 @@
 </body>
   <script>
   var viewing=false;
+  const viewbutton=document.getElementById("view-button");
   function viewing(){
     if (viewing==false){
       viewing=true; 
-      document.getElementsByClassName("view-button").style.opacity=1;
+      viewbutton.style.opacity=1;
     }
     else{
       viewing=false;
-      document.getElementsByClassName("view-button").style.opacity=0.5;
+      viewbutton.style.opacity=0.5;
     }
   }
 </script>
