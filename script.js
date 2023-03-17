@@ -60,6 +60,20 @@ drone.on('error', error => {
   console.error(error);
 });
 
+var viewing=false;
+
+document.getElementById('view-button').addEventListener('click', function() {
+  var viewbutton=document.getElementById('view-button');
+  if (viewing=false){
+    viewing=true; 
+    viewbutton.style.opacity=1;
+  }
+  else{
+    viewing==false;
+    viewbutton.style.opacity=0.5;
+  }
+});
+
 function getRandomName() {
     var name=get_cookie("name");
     var currenttitle=get_cookie("currenttitle");
