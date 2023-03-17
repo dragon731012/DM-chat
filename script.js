@@ -19,14 +19,7 @@ drone.on('open', error => {
   }
   console.log('Successfully connected to Scaledrone');
 
-  const room = drone.subscribe('observable-room',{
-    historyCount: 5;
-  });
-  room.on('history_message', message => {
-    const el = document.createElement('div');
-    el.appendChild(createMemberElement(message));
-    el.appendChild(document.createTextNode(message));
-  });
+  const room = drone.subscribe('observable-room');
   room.on('open', error => {
     if (error) {
       return console.error(error);
