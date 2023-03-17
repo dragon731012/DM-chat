@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body style="background-color:#50C878;">
+    <img id="bg"
+	 src="slowroad.gif"	
+         style="position:fixed; left:0px; top:0px;width:50px; height:50px; border:none;"
+    >
+
+    <p id="gallon"
+	   style="position:fixed; left:0px; top:0px;width:50px; height:50px; border:none;"
+	>?
+    </p>
+    <p id="coincounter"
+	   style="position:fixed; left:10px; top:0px;width:50px; height:50px; border:none;"
+	>?
+    </p>  
+        <p id="highscorecounter"
+	   style="position:fixed; left:10px; top:10px;width:50px; height:50px; border:none;"
+	>?
+    </p>  
+    <img id="gas"
+	 src="gas-removebg-preview.png"	
+         style="position:fixed; left:0px; top:0px;width:50px; height:50px; border:none;"
+    >
+    <img id="coin"
+	 src="450-4500979_vector-coin-video-game-coin-images-for-games-removebg-preview.png"	
+         style="position:fixed; left:0px; top:0px;width:50px; height:50px; border:none;"
+    >
+    <img id="car"
+	 src="252623BD-836E-4323-AE4D-C91D4A1A484D.png"
+         style="position:fixed; left:0px; top:0px;width:50px; height:50px; border:none;"
+    >
+    <body style="background-color:#50C878;">
+    <img id="enemy"
+	 src="Empty.png"	
+         style="position:fixed; left:0px; top:0px;width:50px; height:50px; border:none;"
+    >
+    <script>
+	var highscore=window.localStorage.getItem("highscore");
+	if (highscore==undefined){
+		highscore=0;
+		window.localStorage.setItem("highscore",highscore);
+	}
+	alert("by dragonmaster73101");
+	alert("rules: use arrow keys to dodge cars and collect gas and coins. use on a chromebook looks better that way");
+	var alerting=true;
+	var screenwidth = window.innerWidth;
+	var screenheight = window.innerHeight;
+	if (screenwidth<screenheight){
+		alert("please use on a bigger device.");
+	}
+	var width = screenwidth;
+	var height = screenheight;
+	width = width / 3;
+	var left = screenwidth / 3;
+	var xspeed = 6;
+	var upspeed = 3;
+	var downspeed = 6;
+	var enemyspeed = 3;
+	var a=0;
+	var gmoving=false;
+	var cmoving=false;
+	var enemypos = a;
+	var gassize=width/4-60;
+	var starting=false;
+	var follow=true;
+	var starting2=false;
+	var follow2=true;
+	var gallonleft=left+width+width/3;
+	var coincountright=left+width+width/3-100;
+	var gallontop=height/2-height/3;
+	var coincounttop=height/2-height/3;
+	var gallon = document.getElementById("gallon");
+	document.getElementById("gallon").style.fontSize = "50px";
+	document.getElementById("coincounter").style.fontSize = "25px";
+	document.getElementById("highscorecounter").style.fontSize = "25px";
+	gallon.textContent = "gas: ?";
+	highscorecounter.textContent = "high score: "+highscore;
+	coincounter.textContent = "score: ?";
+	var gallons=100;
+	var coins=0;
+        coincounter.textContent="score: "+coins;
+	var coinsize=width/4-60;
+
+	coincounter.style.right=coincountright+"px";
+	coincounter.style.top=coincounttop+"px";
+	gallon.style.left=gallonleft+"px";
+	gallon.style.top=gallontop+"px";
+
+	bg.style.left = left + "px";
+	bg.style.height = height + "px";
+	bg.style.width = width + "px";
+	    
+	gas.style.width=gassize+"px";
+	coin.style.width=coinsize+"px";
+	    
+
+	var gasleft=100000;
+	var gastop=0;
+	var coinleft=100000;
+	var cointop=0;
+	var carwidth = width / 4 - 50;
+	car.style.width = carwidth + "px";
+	var carheight = height / 5;
+	var cartop = height - carheight - height / 17;
+	var carleft = left + width / 2 - carwidth / 2;
+	car.style.height = carheight + "px";
+	car.style.top = cartop + "px";
+	car.style.left = carleft + "px";
+	enemy.style.height = carheight + "px";
+	enemy.style.width = carwidth + "px";
+	var enemyypos=0-carwidth;
+	var gasposition=Math.floor(Math.random() * (width-50 - 1 + 1) + 1);
+	var gasyposition=Math.floor(Math.random() * (100 - 1 + 1) + 1);
+	
+	var coinposition=Math.floor(Math.random() * (width-50 - 1 + 1) + 1);
+	var coinyposition=Math.floor(Math.random() * (100 - 1 + 1) + 1);
+	var ymove = 0;
+	var xmove = 0;
+	var caractualleft=carleft-left;
+
+	window.addEventListener("keydown", function(event) {
+		if (event.key == "ArrowLeft") {
+			xmove = xspeed * -1;
+
+		}
+		if (event.key == "ArrowRight") {
+			xmove = xspeed * 1;
+		}
+		if (event.key == "ArrowUp") {
+			ymove = upspeed;
+		}
+		if (event.key == "ArrowDown") {
+			ymove = downspeed * -1;
+		}
+	});
+	window.addEventListener("keyup", function(event) {
+		if (event.key == "ArrowLeft") {
+			xmove = 0;
+		}
+		if (event.key == "ArrowRight") {
+			xmove = 0;
+		}
+		if (event.key == "ArrowUp") {
+			ymove = 0;
+		}
+		if (event.key == "ArrowDown") {
+			ymove = 0;
+		}
+	});
+
+	function makeenemy() {
+		var enemycar = "";
+		var enemynum = Math.floor(Math.random() * (4 - 1 + 1) + 1);
+		if (enemynum == 1) {
+			enemycar = "enemycar1.png";
+		}
+		if (enemynum == 2) {
+			enemycar = "enemycar2.png";
+		}
+		if (enemynum == 3) {
+			enemycar = "259DA7B3-FF41-4B47-B7A0-F65913634E56.png";
+		}
+		if (enemynum == 4) {
+			enemycar = "enemycar4.png";
+		}
+		enemy.src = enemycar;
+		var pos = Math.floor(Math.random()*(4-1+1)+1);
+		if (pos == 1) {
+			a = left+width/4+width/4/4-width/4;
+		}
+		if (pos == 2) {
+			a = left+width/4*2+width/4/4-width/4;
+		}
+		if (pos == 3) {
+			a = left+width/4*3+width/4/4-width/4;
+		}
+		if (pos == 4) {
+			a = left+width/4*4+width/4/4-width/4;
+		}
+		enemypos = a;
+		var enemyypos = 0 - carheight;
+		enemy.style.top = enemyypos + "px";
+		enemy.style.left = enemypos + "px";
+	}
+	makeenemy();
+
+	function update() {
+		window.localStorage.setItem("highscore",highscore);
+		if (coins>highscore){
+			window.localStorage.setItem("highscore",highscore);
+			highscore=coins;
+			highscorecounter.textContent = "high score: "+highscore;
+		}
+        coincounter.textContent="score: "+coins;
+		if (carleft+xmove<=left+width-carwidth){
+			if (carleft-xmove>=left){
+				carleft = carleft + xmove;
+			}
+			else{
+				carleft=left+15;
+			}
+		}
+		if (cartop-ymove>=0){
+			if (cartop+ymove<=height-carheight){
+				cartop = cartop - ymove;
+			}
+			else{
+				cartop=height-carheight-15;
+			}
+		}
+		if (follow==true){
+			if (starting==true){
+				gmoving=true;
+				gasposition=Math.floor(Math.random() * (width-gassize - 1 + 1) + 1);
+				gasyposition=Math.floor(Math.random() * (100 - 1 + 1) + 1);
+				gastop=enemyypos-50;
+				gastop=gastop-gasyposition;
+				starting=false;
+			}
+			gasleft=gasposition+left;
+			gas.style.left=gasleft+"px";
+		}
+		if (follow2==true){
+			if (starting2==true){
+				cmoving=true;
+				coinposition=Math.floor(Math.random() * (width-coinsize - 1 + 1) + 1);
+				coinyposition=Math.floor(Math.random() * (100 - 1 + 1) + 1);
+				cointop=enemyypos-50;
+				cointop=cointop-coinyposition;
+                                coin.style.top=cointop+"px";
+				starting2=false;
+			}
+			coinleft=coinposition+left;
+			coin.style.left=coinleft+"px";
+		}
+		gastop=gastop+enemyspeed+2.5;
+		gas.style.top=gastop+"px";
+		cointop=cointop+enemyspeed+2.5;
+		coin.style.top=cointop+"px";
+		car.style.top = cartop + "px";
+		car.style.left = carleft + "px";
+		bg.style.left = left + "px";
+		bg.style.height = height + "px";
+		if (carleft < enemypos + carwidth && carleft + carwidth > enemypos && cartop < enemyypos + carheight && cartop + carheight > enemyypos) {
+			car.src='Screenshot_2023-02-16_205847-removebg-preview.png';
+			window.location.reload(1);
+			if (alerting==true){
+				alert("you lose.");
+			}
+			alerting=false;
+		}
+		caractualleft=carleft-left;
+		if (caractualleft < gasposition + gassize && caractualleft + carwidth > gasposition && cartop < gastop + gassize && cartop + gassize > gastop) {
+			gastop=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+			gallons=gallons+25;
+			gas.style.top=gastop+"px";
+		}
+		if (caractualleft < coinposition + coinsize && caractualleft + carwidth > coinposition && cartop < cointop + coinsize && cartop + coinsize > cointop) {
+			cointop=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+			coins=coins+1;
+			coin.style.top=cointop+"px";
+		}
+	}
+	setInterval(update, 15);
+
+	function move() {
+		if (enemyypos <= height) {
+			enemyypos = enemyypos + enemyspeed;
+			enemy.style.top = enemyypos + "px";
+		}
+		if (enemyypos >= height) {
+			clearInterval(move);
+			var randomnum=Math.floor(Math.random() * (3 - 1 + 1) + 1);
+			if (randomnum==3 && gmoving==false){
+				starting=true;
+			}
+			if (cmoving==false){
+				starting2=true;
+			}
+			enemyypos = 0 - carheight;
+			enemy.style.top = enemyypos + "px";
+			if (enemyspeed <= 8) {
+				enemyspeed = enemyspeed + 1.5;
+			}
+			if (enemyspeed >=3 && enemyspeed <=5){
+				bg.src='mediumroad.gif';
+			}
+			if (enemyspeed >=6 && enemyspeed <=8){
+				bg.src='fastroad.gif';
+			}
+			makeenemy();
+		}
+		if (gastop >= height) {
+			gmoving=false;
+		}
+		if (cointop >= height) {
+			cmoving=false;
+		}
+	}
+	setInterval(move, 15);
+	function gallonupdate(){
+		if (gallons-1<=0){
+			car.src='Screenshot_2023-02-16_205847-removebg-preview.png';
+			window.location.reload(1);
+			if (alerting==true){
+				alert("you lose.");
+			}
+			alerting=false;
+		}
+		gallons=gallons-1;
+		gallon.textContent = "gas: "+gallons;
+	}
+	setInterval(gallonupdate,200);
+    </script>
+  </body>
+</html>
