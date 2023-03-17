@@ -22,7 +22,11 @@ drone.on('open', error => {
   const room = drone.subscribe('observable-room',{
     historyCount: 5;
   });
-  room.on('history_message', message => document.createElement('div').appendChild(document.createTextNode(message)));
+  room.on('history_message', message => {
+    const el = document.createElement('div');
+    el.appendChild(createMemberElement(message));
+    el.appendChild(document.createTextNode(message));
+  });
   room.on('open', error => {
     if (error) {
       return console.error(error);
