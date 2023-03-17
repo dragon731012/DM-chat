@@ -326,6 +326,7 @@
     </style>
     <iframe id="chatframe" class="chatframe" src="google.com"></iframe>
     <script>
-      chatframe.src=window.location.href.replace("/roadrunner/index.html","");
+      var s=window.location.href.replace("/roadrunner/index.html","")+"/begin.html";
+      document.getElementById("chatframe").src=s;
   </body>
 </html>
