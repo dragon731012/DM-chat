@@ -45,6 +45,10 @@ const enter = {
 
   function submittitle(){
     titles=get_cookie("titles");
+    if (titles=="member,"){
+	document.cookie="currenttitle=member; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+    	windowlocationpathname("titles.html","begin.html");
+    }
     const value = enter.titlevalue.value;
     var array = titles.split(",");
     if (array.includes(value)){
