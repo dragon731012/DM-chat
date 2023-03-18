@@ -45,10 +45,10 @@ const enter = {
 
   function submittitle(){
     titles=get_cookie("titles");
-    const value = enter.titlevalue.value;
+    const value = enter.titlevalue.value.toLowerCase();
     var array = titles.split(",");
-    if (array.includes(toLowerCase(value))){
-    	document.cookie="currenttitle="+toLowerCase(value)+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+    if (array.includes(value)){
+    	document.cookie="currenttitle="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
     	windowlocationpathname("titles.html","begin.html");
     }
     else{
