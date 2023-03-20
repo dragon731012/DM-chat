@@ -1,4 +1,10 @@
 const CLIENT_ID = 'm3BAnyjnCGqgWZye';
+const ownerlist=["Matteo","dragonmaster73101"];
+const adminlist=["Nate","Pax","Fedex Driver DragonJR","julian","davey","dragonjr","Joey - Let's Ship out Your Order!","KAISER WILHELM II"," C@MDEN","King cupcake lll"];
+const coadminlist=["Yoga"," king Andrew the ll","mason"];
+const fedex=["testname"];
+const bot=["bothacker1115"]
+const youreverydaydavey=["davey"]
 //PUT BANNED NAMES AND ADMIN NAMES IN CHANGEUSERNAME.HTML TOO
 function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
 const drone = new ScaleDrone(CLIENT_ID, {
