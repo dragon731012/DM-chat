@@ -1,7 +1,7 @@
 const CLIENT_ID = 'm3BAnyjnCGqgWZye';
 const banlist=["paxton loves sex","barb","bean","p o r n_d a d d y","peyton","Gu@lp Gu@lp 3000"];
 const ownerlist=["Matteo","dragonmaster73101"];
-const adminlist=["Nate","Pax","DavidAtSchool","julian"];
+const adminlist=["Nate","Pax","davey","julian"];
 const coadminlist=["Yoga","dragonjr","mason"];
 function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
 const drone = new ScaleDrone(CLIENT_ID, {
