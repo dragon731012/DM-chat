@@ -6,3 +6,7 @@ a static chat website that uses scaledrone so you can chat with your friends wit
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/dragon731012/DM-chat)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dragon731012/DM-chat)
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/dragon731012/DM-chat)
+
+or
+
+[![download this site](https://github.com/dragon731012/DM-chat/blob/main/download-this-site.png?raw=true)](https://deploy.workers.cloudflare.com/?url=https://github.com/dragon731012/DM-chat)
