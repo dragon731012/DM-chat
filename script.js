@@ -37,12 +37,6 @@ drone.on('open', error => {
 
   room.on('member_join', member => {
     members.push(member);
-    const el = DOM.messages;
-    const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
-    el.appendChild(const el2 = document.createElement('div'); el2.appendChild(createMemberElement("server: "member+" has joined the room:")); el2.className = 'message');
-    if (wasTop) {
-      el.scrollTop =  el.scrollHeight - el.clientHeight;
-    }
     updateMembersDOM();
   });
 
