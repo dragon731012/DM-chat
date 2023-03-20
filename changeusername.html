@@ -29,21 +29,36 @@
   function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
   var titles=get_cookie("titles");
   const ownerlist=["Matteo","dragonmaster73101"];
-  const adminlist=["Nate","Pax","Fedex Driver DragonJR","julian","davey","dragonjr","Joey - Let's Ship out Your Order!"];
+  const adminlist=["Nate","Pax","Fedex Driver DragonJR","julian","davey","dragonjr","Joey - Let's Ship out Your Order!","update"];
   const coadminlist=["Yoga"," king Andrew the ll","mason","KAISER WILHELM II","C@MDEN","King cupcake lll"];
   const fedex=["testname"];
+  const bot=["update"];
   const enter = {
   username: document.querySelector('.usernameprompt'),
   button: document.querySelector('.button'),
 };
   function submitusername(){
     const value = enter.username.value;
-    if (adminlist.includes(value) || coadminlist.includes(value) || adminlist.includes(value) || ownerlist.includes(value) || fedex.includes(value)){
+    if (adminlist.includes(value) || coadminlist.includes(value) || adminlist.includes(value) || ownerlist.includes(value) || bot.includes(value) || fedex.includes(value)){
       if (adminlist.includes(value)){
         var nothing="gihguyjrhfg76iytdft7ygdf7tyd5f7tydf76yuf67yuf67yrf5t6dsceast54r";
         var ask=prompt("what is the password for this account?");
         if (ask==nothing){
           titles=titles+"admin,";
+          document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          windowlocationpathname("/changeusername.html","/titles.html");
+        }
+        else{
+          alert("wrong password");
+        }
+      }
+      
+      if (bot.includes(value)){
+        var nothing="password1234";
+        var ask=prompt("what is the password for this account?");
+        if (ask==nothing){
+          titles=titles+"bot,";
           document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
           document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
           windowlocationpathname("/changeusername.html","/titles.html");
