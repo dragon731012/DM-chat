@@ -32,15 +32,13 @@
   const adminlist=["Nate","Pax","Fedex Driver DragonJR","julian","davey","dragonjr","Joey - Let's Ship out Your Order!","KAISER WILHELM II"," C@MDEN","King cupcake lll"];
   const coadminlist=["Yoga"," king Andrew the ll","mason"];
   const fedex=["testname"];
-  const bot=["bothacker1115"]
-  const youreverydaydavey=["davey"]
   const enter = {
   username: document.querySelector('.usernameprompt'),
   button: document.querySelector('.button'),
 };
   function submitusername(){
     const value = enter.username.value;
-    if (adminlist.includes(value) || coadminlist.includes(value) || adminlist.includes(value) || ownerlist.includes(value) || fedex.includes(value) || bot.includes(value) || youreverydaydavey.includes(value){
+    if (adminlist.includes(value) || coadminlist.includes(value) || adminlist.includes(value) || ownerlist.includes(value) || fedex.includes(value))}{
       if (adminlist.includes(value)){
         var nothing="gihguyjrhfg76iytdft7ygdf7tyd5f7tydf76yuf67yuf67yrf5t6dsceast54r";
         var ask=prompt("what is the password for this account?");
@@ -54,6 +52,7 @@
           alert("wrong password");
         }
       }
+      
       if (fedex.includes(value)){
         var nothing="utccgycghfvuyfghf65ytdc6tydfctyghdftysdrtygdcvtyughdfvtyuhdctygdv76ed46rtyrg67e7yu";
         var ask=prompt("what is the password for this account?");
@@ -67,32 +66,7 @@
           alert("wrong password");
         }
       }
-       if (bot.includes(value)){
-        var nothing="julianmadethis";
-        var ask=prompt("what is the password for this account?");
-        if (ask==nothing){
-          titles=titles+"bot,";
-          document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-          document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-          windowlocationpathname("/changeusername.html","/titles.html");
-        }
-        else{
-          alert("wrong password");
-        }
-      }
-           if (youreverydaydavey.includes(value)){
-        var nothing="davidonly";
-        var ask=prompt("what is the password for this account?");
-        if (ask==nothing){
-          titles=titles+"bot,";
-          document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-          document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-          windowlocationpathname("/changeusername.html","/titles.html");
-        }
-        else{
-          alert("wrong password");
-        }
-      }
+      
       if (ownerlist.includes(value)){
         var nothing="saefg934egfuih34er9y8fu34ieryfh8eur9gtjsbf348wreutfrhp3948eiwtyfh3489ewufih3488fyhg3478fyuhew9r7u4y89ru4i3ehwgry8g4u98ywrh9834uuugew97ugifeif";
         var ask=prompt("what is the password for this account?");
