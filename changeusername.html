@@ -34,13 +34,14 @@
   const fedex=["testname"];
   const bot=["Bothacker1115"];
   const youreverydaydavey=["davey2"];
+  const andrew=["cupcake lord"];
   const enter = {
   username: document.querySelector('.usernameprompt'),
   button: document.querySelector('.button'),
 };
   function submitusername(){
     const value = enter.username.value;
-    if (adminlist.includes(value) || coadminlist.includes(value) || adminlist.includes(value) || ownerlist.includes(value) || bot.includes(value) || youreverydaydavey.includes(value) || fedex.includes(value)){
+    if (adminlist.includes(value) || coadminlist.includes(value) || adminlist.includes(value) || ownerlist.includes(value) || bot.includes(value) || youreverydaydavey.includes(value) || andrew.includes(value) || fedex.includes(value)){
       if (adminlist.includes(value)){
         var nothing="gihguyjrhfg76iytdft7ygdf7tyd5f7tydf76yuf67yuf67yrf5t6dsceast54r";
         var ask=prompt("what is the password for this account?");
@@ -68,7 +69,21 @@
           alert("wrong password");
         }
       }
-            if (youreverydaydavey.includes(value)){
+      if (andrew.includes(value)){
+        var nothing="andrew1234";
+        var ask=prompt("what is the password for this account?");
+        if (ask==nothing){
+          titles=titles+"andrew,";
+          document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
+          windowlocationpathname("/changeusername.html","/titles.html");
+        }
+        else{
+          alert("wrong password");
+        }
+      }
+      
+      if (youreverydaydavey.includes(value)){
         var nothing="youreverydaydavey";
         var ask=prompt("what is the password for this account?");
         if (ask==nothing){
