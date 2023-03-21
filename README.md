@@ -9,6 +9,7 @@ a static chat website that uses scaledrone so you can chat with your friends wit
 [![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/dragon731012/DM-chat/tree/main)
 [![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/dragon731012/DM-chat)
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/es0AFM)
+[![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://replit.com/github/dragon731012/DM-chat)
 
 or
 
