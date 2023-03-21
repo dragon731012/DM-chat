@@ -14,6 +14,7 @@ a static chat website that uses scaledrone so you can chat with your friends wit
 [![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/official/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/dragon731012/DM-chat&branch=main&name=DM-chat)
 [![Deploy to Amplify Console](https://binbashbanana.github.io/deploy-buttons/buttons/official/amplifyconsole.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/dragon731012/DM-chat)
 [![Deploy to Oracle Cloud](https://binbashbanana.github.io/deploy-buttons/buttons/official/oraclecloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/dragon731012/DM-chat/archive/refs/heads/main.zip)
+[![Run on Google Cloud](https://binbashbanana.github.io/deploy-buttons/buttons/official/googlecloud.svg)](https://deploy.cloud.run/?git_repo=https://github.com/dragon731012/DM-chat)
 
 or
 
