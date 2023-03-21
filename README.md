@@ -13,9 +13,3 @@ a static chat website that uses scaledrone so you can chat with your friends wit
 or
 
 [![download this site](https://github.com/dragon731012/DM-chat/blob/main/download-this-site.png?raw=true)](https://github.com/dragon731012/DM-chat/archive/refs/heads/main.zip)
-
-
-
-
-tests:
-[![Cloud Run Button Demo](assets/cloud-run-button.png)](https://storage.googleapis.com/cloudrun/cloud-run-button.gif)
