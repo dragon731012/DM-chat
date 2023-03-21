@@ -29,12 +29,11 @@
   function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
   var titles=get_cookie("titles");
   const ownerlist=["Matteo","dragonmaster73101"];
-  const adminlist=["Nate","Pax","Andrew","Fedex Driver DragonJR","Bothacker1115","davey","dragonjr","Amazon Driver","Joey - Let's Ship out Your Order!"];
+  const adminlist=["Nate","Pax","Andrew","Fedex Driver DragonJR","Bothacker1115","davey","dragonjr","Joey - Let's Ship out Your Order!"];
   const coadminlist=["Yoga","mason","KAISER WILHELM II","C@MDEN"];
   const fedex=["Testname"];
   const bot=["julianbot"];
   const youreverydaydavey=["davey2"];
-  const amazon=["julianamazon"]
   const enter = {
   username: document.querySelector('.usernameprompt'),
   button: document.querySelector('.button'),
@@ -61,19 +60,6 @@
         var ask=prompt("what is the password for this account?");
         if (ask==nothing){
           titles=titles+"bot,";
-          document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-          document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-          windowlocationpathname("/changeusername.html","/titles.html");
-        }
-        else{
-          alert("wrong password");
-        }
-      }
-            if (amazon.includes(value)){
-        var nothing="amazon1234";
-        var ask=prompt("what is the password for this account?");
-        if (ask==nothing){
-          titles=titles+"amazon,";
           document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
           document.cookie="name="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
           windowlocationpathname("/changeusername.html","/titles.html");
