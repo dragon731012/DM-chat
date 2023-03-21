@@ -4,7 +4,6 @@ const adminlist=["Nate","Pax","Andrew","Fedex Driver DragonJR","Bothacker1115","
 const coadminlist=["Yoga","mason","KAISER WILHELM II"," C@MDEN","King cupcake lll"];
 const fedex=["testname"];
 const bot=["Bothacker1115"];
-const store["Food Lion"];
 const youreverydaydavey=["davey2"];
 //PUT BANNED NAMES IN INDEX.HTML AND ADMIN NAMES IN CHANGEUSERNAME.HTML TOO
 function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
