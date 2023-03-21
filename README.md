@@ -10,6 +10,7 @@ a static chat website that uses scaledrone so you can chat with your friends wit
 [![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/dragon731012/DM-chat)
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/es0AFM)
 [![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://replit.com/github/dragon731012/DM-chat)
+[![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/official/glitch.svg)](https://glitch.com/edit/#!/import/github/dragon731012/DM-chat)
 
 or
 
