@@ -5,7 +5,7 @@ const coadminlist=["Yoga","mason","KAISER WILHELM II"," C@MDEN","King cupcake ll
 const fedex=["testname"];
 const bot=["bothacker1115"];
 const youreverydaydavey=["davey2"];
-//PUT BANNED NAMES IN INDEX.HTML AND ADMIN NAMES IN CHANGEUSERNAME.HTML TOO
+//PUT BANNED NAMES IN BEGIN.HTML AND ADMIN NAMES IN CHANGEUSERNAME.HTML TOO
 function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
