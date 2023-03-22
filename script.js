@@ -158,6 +158,12 @@ function sendMessage() {
 			document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
 			window.location.pathname="/titles.html";
 		  }
+		  if (value2=='/owner'){
+			alert("you have been given a new role!");
+			titles=titles+"fake owner,";
+			document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC"; 
+			window.location.pathname="/titles.html";
+		  }
 	  }
 	  else{ 
 		  DOM.input.value = '';
