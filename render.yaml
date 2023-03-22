@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: my blog
+    name: DM-chat
     env: static
     buildCommand: 
-    staticPublishPath: ./build
+    staticPublishPath: ./
     buildFilter:
       paths:
       - src/**/*.js
