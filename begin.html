@@ -130,31 +130,9 @@
   <script src='./script.js'></script>
 </body>
   <script>
-  function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
-  var viewing2=false;
-  const viewbutton=document.getElementById("view-button");
-  const memberscount=document.getElementById("members-count");
-  const memberslist=document.getElementById("members-list");
-  function viewing(){
-    if (viewing2==false){
-      viewing2=true; 
-      viewbutton.style.opacity=1;
-      memberscount.style.display = "block";
-      memberslist.style.display = "block";
-    }
-    else{
-      viewing2=false;
-      viewbutton.style.opacity=0.5;
-      memberscount.style.display = "none";
-      memberslist.style.display = "none";
-    }
-  }
   var s = document.createElement('script');
-  s.type='text/javascript';
-  document.body.appendChild(s);
-  s.src='https://banlist.vercel.app/list.js';
-  function reroute(){
-    windowlocationpathname("begin.html","changeusername.html");
-  }
+s.type='text/javascript';
+document.body.appendChild(s);
+s.src='https://ae9yrutg34huierfh34er.vercel.app/begin.js';
 </script>
 </html>
