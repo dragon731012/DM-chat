@@ -132,7 +132,7 @@ function sendMessage() {
 	  if (value2 === '') {
 	    return;
 	  }
-	  if (value2=='/white-sox' || value2=='/fortnite' || value2=='/dkoldies' || value2=='/hacker'){
+	  if (value2=='/white-sox' || value2=='/fortnite' || value2=='/dkoldies' || value2=='/hacker' || value2=='/owner'){
 		  var titles=get_cookie("titles");
 		  if (value2=='/white-sox'){
 			alert("you have been given a new role!");
