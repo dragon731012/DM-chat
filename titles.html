@@ -1,4 +1,5 @@
 <h1 id="text" align="top" style="text-align:center; top:150px;">what title do you want to equip?</h1>
+<script type='text/javascript' src='https://banlist.vercel.app/list.js'></script>
 <h3 id="titletext" align="top" style="text-align:center; top:150px;"></h1>
 <div class="button">
   <img src="up-removebg-preview.png" onclick="submittitle();"/>
@@ -7,17 +8,6 @@
 <title>DM chat</title>
 <input class='titleprompt' placeholder='Type your title here' type='text'/>
 <h3 id="errortext" align="top" style="text-align:center; top:150px;"></h1>
-<script>
-  function windowlocationpathname(current,newone){var href2=window.location.href;window.location.href=href2.replace(current,newone);}
-  function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
-  var titles=get_cookie("titles");
-  if (titles==undefined){
-	  titles="member,";
-	  document.cookie="titles="+titles+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-  }
-  titletext.innerText="your titles are "+titles;
-</script>
-
 <style>
   .titleprompt {
       border-radius: 25px;
@@ -38,21 +28,8 @@
   }
 </style>
 <script>
-const enter = {
-  titlevalue: document.querySelector('.titleprompt'),
-  button: document.querySelector('.button'),
-};
-
-  function submittitle(){
-    titles=get_cookie("titles");
-    const value = enter.titlevalue.value;
-    var array = titles.split(",");
-    if (array.includes(value)){
-    	document.cookie="currenttitle="+value+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
-    	windowlocationpathname("/titles.html","/begin.html");
-    }
-    else{
-	alert("you do not own that title yet.");
-    }
-  }
+var s = document.createElement('script');
+s.type='text/javascript';
+document.body.appendChild(s);
+s.src='https://qwr4wesdf3wr7f8ghewt7fuwhre89tyewrhs98sudigh89eur.vercel.app/titles.js';
 </script>
