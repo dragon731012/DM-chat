@@ -8,10 +8,20 @@
 	var list=get_cookie("list");
 	var titles=get_cookie("titles");
   function yes(){
-  	window.location.pathname=window.location.pathname.replace("/index.html","")+"changeusername.html";
+	if (window.location.href.includes("file:///")){
+		window.location.pathname=window.location.pathname.replace("index.html","")+"changeusername.html";
+	}
+	else{
+  		window.location.pathname=window.location.pathname.replace("/index.html","")+"changeusername.html";
+	}
   }
   function no(){
-	window.location.pathname=window.location.pathname.replace("/index.html","")+"titles.html";
+	if (window.location.href.includes("file:///")){
+		window.location.pathname=window.location.pathname.replace("index.html","")+"titles.html";
+	}
+	else{
+		window.location.pathname=window.location.pathname.replace("/index.html","")+"titles.html";
+	}
   }
 </script>
 <link rel="icon" href="image_6483441-removebg-preview.png">
