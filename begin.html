@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html>
 <head>
   <script type='text/javascript' src='https://banlist.vercel.app/list.js'></script>
@@ -86,6 +86,20 @@
       top:0px;
       height:6%;
     }
+    .report-button{
+      float: right;
+      opacity:0.5;
+      margin-left: auto;
+      margin-right: 0;
+      width:3%;
+      position: absolute;
+      right:7%;
+      top:0px;
+      height:6%;
+    }
+    .report-button:hover{
+      opacity:1;
+    }
     .download-button{
       float: left;
       opacity:0.5;
@@ -119,6 +133,7 @@
 <body>
   <img src="button_change-username-and-title.png" align="left" class='change-button' id='change-button' onclick="reroute();"/>
   <img src="view.png" align="right" class='view-button' id='view-button' onclick="viewing();"/>
+  <img src="reportflag.png" align="right" class='report-button' id='report-button' onclick="window.location.href="/report.html"/>
   <div id='members-count' class='members-count'>-</div>
   <div id='members-list' class='members-list'>-</div>
   <div class='messages'></div>
