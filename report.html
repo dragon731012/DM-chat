@@ -1,0 +1,88 @@
+<form id="form">
+  <div class="field">
+    <label for="username">username</label>
+    <input type="text" name="username" id="username">
+  </div>
+  <div class="field">
+    <label for="reported">message</label>
+    <input type="text" name="reported" id="reported">
+  </div>
+  <div class="field">
+    <label for="reason">reason</label>
+    <input type="text" name="reason" id="reason">
+  </div>
+  <div class="field">
+    <label for="proof">reason</label>
+    <input type="text" name="proof" id="proof">
+  </div>
+  
+  <input type="submit" id="button" value="Report" >
+</form>
+
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('c4ibbAoX6wTt3Dj68')
+</script>
+<script>
+      const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_5z7xjri';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Report';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Report';
+      alert(JSON.stringify(err));
+    });
+});
+</script>
+<style>
+      .field {
+        margin: 0 auto;
+        align:center;
+        text-align: center;
+  margin-bottom: 10px;
+}
+
+.field label {
+  align:center;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.field input {
+  align: center;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  min-width: 250px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  align: center;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #0000FF;
+  color: #fff;
+  border: none;
+}
+</style>
